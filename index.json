@@ -1,0 +1,78 @@
+{
+  "indexVersion": 1,
+  "name": "Private New API Plugins",
+  "plugins": [
+    {
+      "key": "typesafe-jev",
+      "name": "TypeSafe Jev",
+      "icon": "text:TS",
+      "iconFile": {
+        "path": "plugins/tasks/typesafe-jev/icon.png",
+        "sha256": "8505fa12ff380fa475df9ba609c1cd04d85d479d72b3976b1e2ecff33e0f63ff"
+      },
+      "website": "https://docs.typesafe.ai/",
+      "description": {
+        "en": "TypeSafe Jev structured decisions",
+        "zh": "TypeSafe Jev 结构化决策评估"
+      },
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/typesafe/v1/systemone",
+          "type": "submit",
+          "decode": "createJob",
+          "render": "jobCreated",
+          "models": [
+            "jev-latest",
+            "jev-preview",
+            "jev-1.13.0"
+          ]
+        }
+      ],
+      "usageSchema": {
+        "input_tokens": {
+          "type": "number",
+          "unit": "token",
+          "description": {
+            "en": "Input tokens",
+            "zh": "输入 token"
+          }
+        },
+        "output_tokens": {
+          "type": "number",
+          "unit": "token",
+          "description": {
+            "en": "Output tokens",
+            "zh": "输出 token"
+          }
+        }
+      },
+      "usageExamples": [
+        {
+          "label": "standard evaluation",
+          "facts": {
+            "input_tokens": 1000,
+            "output_tokens": 0
+          }
+        }
+      ],
+      "usageProfiles": null,
+      "models": [
+        "jev-latest",
+        "jev-preview",
+        "jev-1.13.0"
+      ],
+      "latest": "0.1.0",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "path": "plugins/tasks/typesafe-jev/0.1.0/plugin.js",
+          "sha256": "3ca4fc8f83afb44f4106363c249c9e57d43ed4944ea03b5d5769ba477cfb9a41",
+          "minApiVersion": 1,
+          "kind": "task",
+          "baseUrl": "https://api.typesafe.ai"
+        }
+      ]
+    }
+  ]
+}
