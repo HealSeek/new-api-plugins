@@ -1,6 +1,6 @@
 {
   "indexVersion": 1,
-  "name": "Private New API Plugins",
+  "name": "Airovo New API Plugins",
   "plugins": [
     {
       "key": "typesafe-ai",

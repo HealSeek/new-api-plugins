@@ -1,20 +1,29 @@
-# Private New API Plugins
+# Airovo New API Plugins
 
-Personal marketplace source for New API Task Plugins.
+Public marketplace source for New API Task Plugins.
 
-## Included plugin
+Maintained by [www.airovo.cn](https://www.airovo.cn).
 
-- `typesafe-ai`: TypeSafe AI native evaluation endpoint
-- Gateway route: `POST /typesafe/v1/systemone`
-- Upstream: `POST https://api.typesafe.ai/v1/systemone`
-- Models: `jev-latest`, `jev-preview`, `jev-1.13.0`
+## Available task plugins
+
+| Plugin | Description | Gateway route | Models |
+| --- | --- | --- | --- |
+| `typesafe-ai` | TypeSafe AI structured decisions | `POST /typesafe/v1/systemone` | `jev-latest`, `jev-preview`, `jev-1.13.0` |
+
+This repository currently contains one task plugin. New plugins will be listed
+in this table and published through the root `index.json`.
+
+## Maintainer
+
+- Website: [www.airovo.cn](https://www.airovo.cn)
+- Marketplace source: [HealSeek/new-api-plugins](https://github.com/HealSeek/new-api-plugins)
 
 ## Marketplace source
 
 Serve this repository from a stable HTTPS URL and use its `index.json` as the
 marketplace index URL in New API. The index references immutable plugin files
-under `plugins/tasks/typesafe-ai/0.1.0/` and the sidecar icon at
+under `plugins/tasks/typesafe-ai/0.1.2/` and the sidecar icon at
 `plugins/tasks/typesafe-ai/icon.png`.
 
-The repository is personal-use software. Review plugin source and pricing
+Review each plugin's source, upstream endpoint, permissions, and pricing
 before enabling it in a shared or production gateway.
