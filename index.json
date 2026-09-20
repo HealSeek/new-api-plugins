@@ -3,6 +3,87 @@
   "name": "Airovo New API Plugins",
   "plugins": [
     {
+      "key": "grok-imagine-video",
+      "name": "Grok Imagine Video",
+      "icon": "Grok.Color",
+      "website": "https://docs.x.ai/developers/model-capabilities/video/generation",
+      "description": {
+        "en": "Grok Imagine Video generation (text-to-video and image-to-video)",
+        "zh": "Grok Imagine Video 视频生成（文生视频、图生视频）"
+      },
+      "routes": [],
+      "protocols": [
+        {
+          "name": "openai_responses",
+          "supports": [
+            "stream",
+            "sync",
+            "background"
+          ]
+        },
+        {
+          "name": "openai_video"
+        }
+      ],
+      "usageSchema": {
+        "aspect_ratio": {
+          "enum": [
+            "1:1",
+            "16:9",
+            "9:16",
+            "4:3",
+            "3:4",
+            "3:2",
+            "2:3"
+          ],
+          "description": {
+            "en": "Requested output aspect ratio.",
+            "zh": "请求的输出宽高比。"
+          }
+        },
+        "duration": {
+          "type": "number",
+          "unit": "second",
+          "description": {
+            "en": "Requested video duration in seconds (1-15).",
+            "zh": "请求的视频时长，单位为秒（1-15）。"
+          }
+        },
+        "resolution": {
+          "enum": [
+            "480p",
+            "720p",
+            "1080p"
+          ],
+          "description": {
+            "en": "Requested output resolution.",
+            "zh": "请求的输出分辨率。"
+          }
+        }
+      },
+      "usageExamples": null,
+      "usageProfiles": null,
+      "channelTypes": [
+        48
+      ],
+      "models": [
+        "grok-imagine-video",
+        "grok-imagine-video-1.5",
+        "grok-imagine-video-1.5-preview"
+      ],
+      "latest": "1.0.0",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "path": "plugins/tasks/grok-imagine-video/1.0.0/plugin.js",
+          "sha256": "2aeb8bc9d0bfaa73cbbc1a292a93f7e0c087749e3b099606181d0683ca67be7f",
+          "minApiVersion": 1,
+          "kind": "task",
+          "baseUrl": "https://api.x.ai"
+        }
+      ]
+    },
+    {
       "key": "typesafe-ai",
       "name": "TypeSafe AI",
       "icon": "text:TA",
