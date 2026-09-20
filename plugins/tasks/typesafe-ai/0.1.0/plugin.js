@@ -7,22 +7,22 @@
 // the structured answer, and reports input/output token usage to the host.
 
 const MODELS = ["jev-latest", "jev-preview", "jev-1.13.0"];
-const QUESTION_TYPES = ["noul", "choice", "score"];
+const QUESTION_TYPES = new Set(["noul", "choice", "score"]);
 
 export const meta = {
   apiVersion: 1,
-  key: "typesafe-jev",
-  name: "TypeSafe Jev",
+  key: "typesafe-ai",
+  name: "TypeSafe AI",
   // Text fallback for gateways that predate sidecar icon support.
-  icon: "text:TA",
+  icon: "text:TS",
   // The gateway reads this sidecar file during upload; do not replace it with
   // a data URI or remote URL in the manifest.
-  version: "0.1.2",
+  version: "0.1.0",
   author: { name: "new-api community" },
   website: "https://docs.typesafe.ai/",
   description: {
-    en: "TypeSafe Jev structured decisions",
-    zh: "TypeSafe Jev 结构化决策评估",
+    en: "TypeSafe AI structured decisions",
+    zh: "TypeSafe AI 结构化决策评估",
   },
   models: MODELS,
   baseUrl: "https://api.typesafe.ai",
@@ -83,7 +83,7 @@ function requireJsonObject(ctx) {
 
 function validateQuestion(id, question) {
   if (!isObject(question)) throw new Error("question " + id + " must be an object");
-  if (QUESTION_TYPES.indexOf(question.type) < 0) {
+  if (!QUESTION_TYPES.has(question.type)) {
     throw new Error("question " + id + " has unsupported type");
   }
   if (!isTextOrStructured(question.instructions)) {

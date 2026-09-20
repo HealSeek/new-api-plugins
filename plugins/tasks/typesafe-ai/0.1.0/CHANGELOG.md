@@ -1,6 +1,6 @@
 ---
 changelogVersion: 1
-plugin: "typesafe-jev"
+plugin: "typesafe-ai"
 version: "0.1.0"
 locale: "en"
 ---
@@ -11,7 +11,7 @@ locale: "en"
 
 ### Added
 
-- Add a TypeSafe Jev task plugin with the `/typesafe/v1/systemone` native route.
+- Add a TypeSafe AI task plugin with the `/typesafe/v1/systemone` native route.
 - Support `jev-latest`, `jev-preview`, and `jev-1.13.0`.
 - Validate `noul`, `choice`, and `score` questions and structured answers.
 - Report provider input and output token usage for gateway billing.

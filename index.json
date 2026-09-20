@@ -3,17 +3,17 @@
   "name": "Private New API Plugins",
   "plugins": [
     {
-      "key": "typesafe-jev",
-      "name": "TypeSafe Jev",
+      "key": "typesafe-ai",
+      "name": "TypeSafe AI",
       "icon": "text:TA",
       "iconFile": {
-        "path": "plugins/tasks/typesafe-jev/icon.png",
+        "path": "plugins/tasks/typesafe-ai/icon.png",
         "sha256": "eaf37fb55b862c3b8108719f6392e42f5006f3b0c24dea670bcbebde2b5e35ea"
       },
       "website": "https://docs.typesafe.ai/",
       "description": {
-        "en": "TypeSafe Jev structured decisions",
-        "zh": "TypeSafe Jev 结构化决策评估"
+        "en": "TypeSafe AI structured decisions",
+        "zh": "TypeSafe AI 结构化决策评估"
       },
       "routes": [
         {
@@ -66,24 +66,24 @@
       "versions": [
         {
           "version": "0.1.2",
-          "path": "plugins/tasks/typesafe-jev/0.1.2/plugin.js",
-          "sha256": "adddc52fffc8e97d17e5ad38f3bf42f4fb5bedc074d8e40d38d22a507a1e528e",
+          "path": "plugins/tasks/typesafe-ai/0.1.2/plugin.js",
+          "sha256": "b3094ed24bb4a9e37e1667731e9c79605262aeecb5bfdcb4649ff8704d41ea2a",
           "minApiVersion": 1,
           "kind": "task",
           "baseUrl": "https://api.typesafe.ai"
         },
         {
           "version": "0.1.1",
-          "path": "plugins/tasks/typesafe-jev/0.1.1/plugin.js",
-          "sha256": "b257da893d84e47a2b780a567a9d820dccc5cc1c2ab167c3d4f7fc3527383ea7",
+          "path": "plugins/tasks/typesafe-ai/0.1.1/plugin.js",
+          "sha256": "93d8113a9c14f2fdf5ee0f8379ef05b92e5ad1ee2a4bc7d33d27ad6f71b4aa90",
           "minApiVersion": 1,
           "kind": "task",
           "baseUrl": "https://api.typesafe.ai"
         },
         {
           "version": "0.1.0",
-          "path": "plugins/tasks/typesafe-jev/0.1.0/plugin.js",
-          "sha256": "3ca4fc8f83afb44f4106363c249c9e57d43ed4944ea03b5d5769ba477cfb9a41",
+          "path": "plugins/tasks/typesafe-ai/0.1.0/plugin.js",
+          "sha256": "ee5ff97b38783fba39fde8e3a4d58610d0c3e2706e55ddb2cec63a059d42af7b",
           "minApiVersion": 1,
           "kind": "task",
           "baseUrl": "https://api.typesafe.ai"

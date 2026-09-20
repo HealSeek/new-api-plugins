@@ -1,6 +1,6 @@
 ---
 changelogVersion: 1
-plugin: "typesafe-jev"
+plugin: "typesafe-ai"
 version: "0.1.2"
 locale: "en"
 ---
