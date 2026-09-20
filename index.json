@@ -8,7 +8,7 @@
       "icon": "text:TA",
       "iconFile": {
         "path": "plugins/tasks/typesafe-jev/icon.png",
-        "sha256": "8505fa12ff380fa475df9ba609c1cd04d85d479d72b3976b1e2ecff33e0f63ff"
+        "sha256": "eaf37fb55b862c3b8108719f6392e42f5006f3b0c24dea670bcbebde2b5e35ea"
       },
       "website": "https://docs.typesafe.ai/",
       "description": {
