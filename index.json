@@ -5,7 +5,7 @@
     {
       "key": "typesafe-jev",
       "name": "TypeSafe Jev",
-      "icon": "text:TS",
+      "icon": "text:TA",
       "iconFile": {
         "path": "plugins/tasks/typesafe-jev/icon.png",
         "sha256": "8505fa12ff380fa475df9ba609c1cd04d85d479d72b3976b1e2ecff33e0f63ff"
@@ -62,8 +62,16 @@
         "jev-preview",
         "jev-1.13.0"
       ],
-      "latest": "0.1.0",
+      "latest": "0.1.1",
       "versions": [
+        {
+          "version": "0.1.1",
+          "path": "plugins/tasks/typesafe-jev/0.1.1/plugin.js",
+          "sha256": "b257da893d84e47a2b780a567a9d820dccc5cc1c2ab167c3d4f7fc3527383ea7",
+          "minApiVersion": 1,
+          "kind": "task",
+          "baseUrl": "https://api.typesafe.ai"
+        },
         {
           "version": "0.1.0",
           "path": "plugins/tasks/typesafe-jev/0.1.0/plugin.js",
