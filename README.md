@@ -22,7 +22,7 @@ in this table and published through the root `index.json`.
 
 Serve this repository from a stable HTTPS URL and use its `index.json` as the
 marketplace index URL in New API. The index references immutable plugin files
-under `plugins/tasks/typesafe-ai/0.1.2/` and the sidecar icon at
+under `plugins/tasks/typesafe-ai/0.1.3/` and the sidecar icon at
 `plugins/tasks/typesafe-ai/icon.png`.
 
 Review each plugin's source, upstream endpoint, permissions, and pricing
