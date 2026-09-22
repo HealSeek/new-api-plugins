@@ -12,7 +12,7 @@ env:
   # Until the plugin-task work merges to main, point this at the branch that
   # carries pkg/jsplugin.
   NEW_API_REPO: QuantumNous/new-api
-  NEW_API_REF: v1.0.0-rc.39
+  NEW_API_REF: main
 
 jobs:
   validate:
