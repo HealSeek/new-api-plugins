@@ -82,6 +82,6 @@ require (
 	gorm.io/gorm v1.25.12 // indirect
 )
 
-replace github.com/QuantumNous/new-api => ../../../new-api-rc39
+replace github.com/QuantumNous/new-api => ../../../new-api
 
-replace github.com/QuantumNous/new-api/relaykit => ../../../new-api-rc39/relaykit
+replace github.com/QuantumNous/new-api/relaykit => ../../../new-api/relaykit
