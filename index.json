@@ -17,7 +17,11 @@
           "name": "openai_image",
           "models": [
             "gpt-image-1",
-            "gpt-image-1-mini"
+            "gpt-image-1-mini",
+            "gpt-image-1.5",
+            "gpt-image-2",
+            "gpt-image-2.5-sunburst",
+            "gpt-image-2.5-flare"
           ]
         }
       ],
@@ -39,6 +43,8 @@
             "low",
             "medium",
             "high",
+            "xhigh",
+            "max",
             "auto"
           ],
           "description": {
@@ -83,10 +89,23 @@
       ],
       "models": [
         "gpt-image-1",
-        "gpt-image-1-mini"
+        "gpt-image-1-mini",
+        "gpt-image-1.5",
+        "gpt-image-2",
+        "gpt-image-2.5-sunburst",
+        "gpt-image-2.5-flare"
       ],
-      "latest": "1.0.0",
+      "latest": "1.1.0",
       "versions": [
+        {
+          "version": "1.1.0",
+          "path": "plugins/tasks/gpt-image-pricing/1.1.0/plugin.js",
+          "sha256": "74f70a9eb00e732799dfbe1afb9eecd98ffb20faa62e18e523d84435add1d896",
+          "minApiVersion": 1,
+          "kind": "task",
+          "baseUrl": "https://api.openai.com",
+          "auth": "api_key"
+        },
         {
           "version": "1.0.0",
           "path": "plugins/tasks/gpt-image-pricing/1.0.0/plugin.js",
