@@ -34,7 +34,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v6
         with:
-          go-version-file: new-api/go.mod
+          go-version: '1.26.6'
 
       - name: Compile all plugins and verify index.json
         working-directory: new-api-plugins/tools/pluginindex
