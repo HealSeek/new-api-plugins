@@ -52,6 +52,18 @@
             "zh": "图片质量"
           }
         },
+        "request_count": {
+          "type": "number",
+          "unit": "count",
+          "unitLabel": {
+            "en": "request",
+            "zh": "次"
+          },
+          "description": {
+            "en": "Image request unit price",
+            "zh": "图片请求单价"
+          }
+        },
         "resolution": {
           "enum": [
             "1024x1024",
@@ -71,6 +83,7 @@
           "facts": {
             "image_count": 1,
             "quality": "medium",
+            "request_count": 1,
             "resolution": "1024x1024"
           }
         },
@@ -79,6 +92,7 @@
           "facts": {
             "image_count": 1,
             "quality": "high",
+            "request_count": 1,
             "resolution": "1536x1024"
           }
         }
@@ -92,8 +106,17 @@
         "gpt-image-2.5-sunburst",
         "gpt-image-2.5-flare"
       ],
-      "latest": "1.2.0",
+      "latest": "1.3.0",
       "versions": [
+        {
+          "version": "1.3.0",
+          "path": "plugins/tasks/gpt-image-pricing/1.3.0/plugin.js",
+          "sha256": "eed772ad712376372b1f239d478454e18fe8c0af9d3e23406ec26e10f57705c0",
+          "minApiVersion": 1,
+          "kind": "task",
+          "baseUrl": "https://api.openai.com",
+          "auth": "api_key"
+        },
         {
           "version": "1.2.0",
           "path": "plugins/tasks/gpt-image-pricing/1.2.0/plugin.js",
