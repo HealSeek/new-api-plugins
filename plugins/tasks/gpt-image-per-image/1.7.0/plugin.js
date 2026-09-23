@@ -82,7 +82,11 @@ function normalizeCount(value) {
 
 function imageRef(value) {
   if (typeof value === "string" && /^(https?:\/\/|data:image\/)/i.test(value)) return value;
+  if (typeof value === "string" && /^[\[{]/.test(value.trim())) {
+    try { return imageRef(JSON.parse(value)); } catch (_) { /* fall through */ }
+  }
   if (isObject(value) && Object.prototype.hasOwnProperty.call(value, "image_url")) return imageRef(value.image_url);
+  if (isObject(value) && Object.prototype.hasOwnProperty.call(value, "url")) return imageRef(value.url);
   if (isObject(value) && typeof value.__fileRef === "string") return value;
   throw new Error("image must be an HTTP URL, data URL, or uploaded file");
 }
@@ -90,7 +94,15 @@ function imageRef(value) {
 function collectImages(req) {
   const values = [];
   const seen = new Set();
-  for (const value of [].concat(req.image ?? [], req.images ?? [])) {
+  const raw = [].concat(req.image ?? [], req.images ?? []);
+  const expanded = [];
+  for (const value of raw) {
+    if (typeof value === "string" && /^\[/.test(value.trim())) {
+      try { const parsed = JSON.parse(value); if (Array.isArray(parsed)) { expanded.push(...parsed); continue; } } catch (_) { /* keep original */ }
+    }
+    expanded.push(value);
+  }
+  for (const value of expanded) {
     if (value === "") continue;
     const identity = isObject(value) && typeof value.__fileRef === "string" ? "file:" + value.__fileRef : typeof value === "string" ? "url:" + value : "object:" + String(value);
     if (seen.has(identity)) continue;

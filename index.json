@@ -84,7 +84,7 @@
         {
           "version": "1.7.0",
           "path": "plugins/tasks/gpt-image-per-image/1.7.0/plugin.js",
-          "sha256": "00d468a6486aba4f37d0dbf2794edfe64d37950561786f3ea32d1415afd0f92a",
+          "sha256": "08e87503e10d7ace9b7c8a5dc0ec6b312da0e47095f6654efedea67aa6f24c6b",
           "minApiVersion": 1,
           "kind": "task",
           "baseUrl": "https://api.openai.com",
@@ -237,7 +237,7 @@
         {
           "version": "1.7.0",
           "path": "plugins/tasks/gpt-image-per-request/1.7.0/plugin.js",
-          "sha256": "9bf762b49f034ef076d1c63ec5134a552b8779e68e74c80ab647ad688bf41487",
+          "sha256": "d0d3702e828663609958fdb1af223a138cecc7ee4be28f574ef631705a4843e9",
           "minApiVersion": 1,
           "kind": "task",
           "baseUrl": "https://api.openai.com",

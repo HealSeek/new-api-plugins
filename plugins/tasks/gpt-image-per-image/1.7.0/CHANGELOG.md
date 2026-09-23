@@ -16,6 +16,7 @@ locale: "en"
 - Support `mask.image_url` for JSON image edits.
 - Forward `output_format` as well as `response_format`.
 - Forward `response_format` for generation and edit requests.
+- Accept JSON-stringified image arrays and `{image_url}` / `{url}` wrapper objects from clients.
 
 ### Migration
 
