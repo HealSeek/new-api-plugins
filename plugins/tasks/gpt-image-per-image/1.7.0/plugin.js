@@ -81,6 +81,7 @@ function normalizeCount(value) {
 }
 
 function imageRef(value) {
+  if (value === null || value === undefined || value === "") return undefined;
   if (typeof value === "string" && /^(https?:\/\/|data:image\/)/i.test(value)) return value;
   if (typeof value === "string" && /^[\[{]/.test(value.trim())) {
     try { return imageRef(JSON.parse(value)); } catch (_) { /* fall through */ }
@@ -103,7 +104,7 @@ function collectImages(req) {
     expanded.push(value);
   }
   for (const value of expanded) {
-    if (value === "") continue;
+    if (value === null || value === undefined || value === "") continue;
     const identity = isObject(value) && typeof value.__fileRef === "string" ? "file:" + value.__fileRef : typeof value === "string" ? "url:" + value : "object:" + String(value);
     if (seen.has(identity)) continue;
     seen.add(identity);
@@ -122,7 +123,7 @@ function normalizeRequest(ctx) {
   const size = normalizeResolution(req.size || req.resolution);
   const quality = normalizeQuality(req.quality);
   const n = normalizeCount(req.n);
-  const mask = req.mask === undefined ? undefined : imageRef(req.mask);
+  const mask = req.mask === null || req.mask === undefined || req.mask === "" ? undefined : imageRef(req.mask);
   return { model, prompt, images, mask, size, quality, n, response_format: req.response_format, output_format: req.output_format };
 }
 
