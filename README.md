@@ -9,7 +9,6 @@ Maintained by [www.airovo.cn](https://www.airovo.cn).
 | Plugin | Description | Gateway route | Models |
 | --- | --- | --- | --- |
 | `typesafe-ai` | TypeSafe AI structured decisions | `POST /typesafe/v1/systemone` | `jev-latest`, `jev-preview`, `jev-1.13.0` |
-| `gpt-image-pricing` | GPT Image generation and editing with resolution-aware billing (Task Plugin channel) | `POST /v1/images/generations`, `POST /v1/images/edits` | `gpt-image-1`, `gpt-image-1-mini`, `gpt-image-1.5`, `gpt-image-2`, `gpt-image-2.5-sunburst`, `gpt-image-2.5-flare` |
 | `gpt-image-per-request` | GPT Image generation and editing with one charge per request | `POST /v1/images/generations`, `POST /v1/images/edits` | GPT Image models |
 | `gpt-image-per-image` | GPT Image generation and editing with one charge per output image | `POST /v1/images/generations`, `POST /v1/images/edits` | GPT Image models |
 | `grok-imagine-video` | Grok Imagine Video asynchronous text-to-video and image-to-video | `POST /v1/videos` through `openai_video` | `grok-imagine-video`, `grok-imagine-video-1.5`, `grok-imagine-video-1.5-preview` |

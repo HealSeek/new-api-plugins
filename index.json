@@ -81,7 +81,7 @@
         {
           "version": "1.0.0",
           "path": "plugins/tasks/gpt-image-per-image/1.0.0/plugin.js",
-          "sha256": "0d6d8e308adbcee0d4b01ecb17dd8cc42c0cdeff836a8180990330e812303769",
+          "sha256": "0abeddadab36ef5963ba77012ea4ff12c1ad14ef153936e386f9a5ebce2d4cca",
           "minApiVersion": 1,
           "kind": "task",
           "baseUrl": "https://api.openai.com",
@@ -168,144 +168,7 @@
         {
           "version": "1.0.0",
           "path": "plugins/tasks/gpt-image-per-request/1.0.0/plugin.js",
-          "sha256": "f371d5edbef30ec179b78e4918aba81c3dac4b1858cabf27ca5ae13d8bd6217b",
-          "minApiVersion": 1,
-          "kind": "task",
-          "baseUrl": "https://api.openai.com",
-          "auth": "api_key"
-        }
-      ]
-    },
-    {
-      "key": "gpt-image-pricing",
-      "name": "GPT Image Pricing",
-      "icon": "OpenAI.Color",
-      "website": "https://platform.openai.com/docs/guides/images",
-      "description": {
-        "en": "OpenAI GPT Image generation and editing with resolution-aware billing",
-        "zh": "支持按分辨率计费的 OpenAI GPT Image 生图与编辑插件"
-      },
-      "routes": [],
-      "protocols": [
-        {
-          "name": "openai_image",
-          "models": [
-            "gpt-image-1",
-            "gpt-image-1-mini",
-            "gpt-image-1.5",
-            "gpt-image-2",
-            "gpt-image-2.5-sunburst",
-            "gpt-image-2.5-flare"
-          ]
-        }
-      ],
-      "usageSchema": {
-        "image_count": {
-          "type": "number",
-          "unit": "count",
-          "unitLabel": {
-            "en": "image",
-            "zh": "张"
-          },
-          "description": {
-            "en": "Image generation unit price",
-            "zh": "图片生成单价"
-          }
-        },
-        "request_count": {
-          "type": "number",
-          "unit": "count",
-          "unitLabel": {
-            "en": "request",
-            "zh": "次"
-          },
-          "description": {
-            "en": "Image request unit price",
-            "zh": "图片请求单价"
-          }
-        },
-        "resolution": {
-          "enum": [
-            "1024x1024",
-            "1536x1024",
-            "1024x1536",
-            "auto"
-          ],
-          "description": {
-            "en": "Output image resolution",
-            "zh": "输出图片分辨率"
-          }
-        }
-      },
-      "usageExamples": [
-        {
-          "label": "1K · 1 image",
-          "facts": {
-            "image_count": 1,
-            "request_count": 1,
-            "resolution": "1024x1024"
-          }
-        },
-        {
-          "label": "2K · 1 image",
-          "facts": {
-            "image_count": 1,
-            "request_count": 1,
-            "resolution": "1536x1024"
-          }
-        }
-      ],
-      "usageProfiles": null,
-      "models": [
-        "gpt-image-1",
-        "gpt-image-1-mini",
-        "gpt-image-1.5",
-        "gpt-image-2",
-        "gpt-image-2.5-sunburst",
-        "gpt-image-2.5-flare"
-      ],
-      "latest": "1.4.0",
-      "versions": [
-        {
-          "version": "1.4.0",
-          "path": "plugins/tasks/gpt-image-pricing/1.4.0/plugin.js",
-          "sha256": "3f19f86fa4873cddc692fba1c3393af4944cc2276e5b1867bfab4f92b92a39f4",
-          "minApiVersion": 1,
-          "kind": "task",
-          "baseUrl": "https://api.openai.com",
-          "auth": "api_key"
-        },
-        {
-          "version": "1.3.0",
-          "path": "plugins/tasks/gpt-image-pricing/1.3.0/plugin.js",
-          "sha256": "eed772ad712376372b1f239d478454e18fe8c0af9d3e23406ec26e10f57705c0",
-          "minApiVersion": 1,
-          "kind": "task",
-          "baseUrl": "https://api.openai.com",
-          "auth": "api_key"
-        },
-        {
-          "version": "1.2.0",
-          "path": "plugins/tasks/gpt-image-pricing/1.2.0/plugin.js",
-          "sha256": "d079cd2235978f72c1c0eac2ef88f66c123cd199ea6a71772b20ab1dc1d6c519",
-          "minApiVersion": 1,
-          "kind": "task",
-          "baseUrl": "https://api.openai.com",
-          "auth": "api_key"
-        },
-        {
-          "version": "1.1.0",
-          "path": "plugins/tasks/gpt-image-pricing/1.1.0/plugin.js",
-          "sha256": "74f70a9eb00e732799dfbe1afb9eecd98ffb20faa62e18e523d84435add1d896",
-          "minApiVersion": 1,
-          "kind": "task",
-          "baseUrl": "https://api.openai.com",
-          "auth": "api_key"
-        },
-        {
-          "version": "1.0.0",
-          "path": "plugins/tasks/gpt-image-pricing/1.0.0/plugin.js",
-          "sha256": "88febecff94295959bed1bb10846f9eea685d4d046585462601aa25d7dae1d13",
+          "sha256": "130aa5586ef39cc13b8488a442ad75d65c45fa658fa2e3ec1e0509f6c455257e",
           "minApiVersion": 1,
           "kind": "task",
           "baseUrl": "https://api.openai.com",
