@@ -160,6 +160,25 @@ function parseMultipartBody(ctx) {
 export function buildSubmitRequest(ctx) {
   const req = normalizeRequest(ctx);
   const headers = { Authorization: "Bearer " + ctx.apiKey, Accept: "application/json" };
+  const hasFile = req.images.some((image) => isObject(image) && typeof image.__fileRef === "string") || (isObject(req.mask) && typeof req.mask.__fileRef === "string");
+  if (hasFile) {
+    const parts = [
+      { name: "model", value: req.model },
+      { name: "prompt", value: req.prompt },
+      { name: "size", value: req.size },
+      { name: "quality", value: req.quality },
+      { name: "n", value: String(req.n) },
+    ];
+    if (req.response_format) parts.push({ name: "response_format", value: req.response_format });
+    if (req.output_format) parts.push({ name: "output_format", value: req.output_format });
+    const imageField = req.images.length === 1 ? "image" : "image[]";
+    for (const image of req.images) {
+      if (isObject(image) && image.__fileRef) parts.push({ name: imageField, fileRef: image.__fileRef });
+      else parts.push({ name: imageField, value: image });
+    }
+    if (isObject(req.mask) && req.mask.__fileRef) parts.push({ name: "mask", fileRef: req.mask.__fileRef });
+    return { url: ctx.baseUrl + "/v1/images/edits", method: "POST", headers, bodyType: "multipart", parts };
+  }
   headers["Content-Type"] = "application/json";
   const body = { model: req.model, prompt: req.prompt, size: req.size, quality: req.quality, n: req.n };
   if (req.response_format) body.response_format = req.response_format;
