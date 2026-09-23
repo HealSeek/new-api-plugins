@@ -13,6 +13,7 @@ locale: "en"
 
 - Preserve the client's transport format for GPT Image edits: JSON URL references use `images[].image_url`, while uploaded files use multipart `image`/`image[]` and `mask` fields.
 - Forward `stream`, `response_format`, and `output_format` on both JSON and multipart requests when provided.
+- Preserve `stream` and `quality` while normalizing protocol input before upstream serialization.
 
 ### Migration
 

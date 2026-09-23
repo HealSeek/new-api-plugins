@@ -240,7 +240,7 @@ export const protocols = {
       if (!prompt) throw new Error("prompt is required");
       const images = collectImages(req);
       if (ctx.operation === "edit" && images.length === 0) throw new Error("image is required for edits");
-      const normalized = { model, prompt, image: images[0], images, mask: req.mask, size: req.size || req.resolution, n: req.n, response_format: req.response_format, output_format: req.output_format };
+      const normalized = { model, prompt, image: images[0], images, mask: req.mask, size: req.size || req.resolution, quality: req.quality, n: req.n, stream: req.stream, response_format: req.response_format, output_format: req.output_format };
       return { kind: "submit", model, action: images.length ? "image_to_image" : "text_to_image", requestBody: normalized };
     },
     render(ctx, task) {
