@@ -79,8 +79,17 @@
         "gpt-image-2.5-sunburst",
         "gpt-image-2.5-flare"
       ],
-      "latest": "1.6.0",
+      "latest": "1.7.0",
       "versions": [
+        {
+          "version": "1.7.0",
+          "path": "plugins/tasks/gpt-image-per-image/1.7.0/plugin.js",
+          "sha256": "00d468a6486aba4f37d0dbf2794edfe64d37950561786f3ea32d1415afd0f92a",
+          "minApiVersion": 1,
+          "kind": "task",
+          "baseUrl": "https://api.openai.com",
+          "auth": "api_key"
+        },
         {
           "version": "1.6.0",
           "path": "plugins/tasks/gpt-image-per-image/1.6.0/plugin.js",
@@ -223,8 +232,17 @@
         "gpt-image-2.5-sunburst",
         "gpt-image-2.5-flare"
       ],
-      "latest": "1.6.0",
+      "latest": "1.7.0",
       "versions": [
+        {
+          "version": "1.7.0",
+          "path": "plugins/tasks/gpt-image-per-request/1.7.0/plugin.js",
+          "sha256": "9bf762b49f034ef076d1c63ec5134a552b8779e68e74c80ab647ad688bf41487",
+          "minApiVersion": 1,
+          "kind": "task",
+          "baseUrl": "https://api.openai.com",
+          "auth": "api_key"
+        },
         {
           "version": "1.6.0",
           "path": "plugins/tasks/gpt-image-per-request/1.6.0/plugin.js",
