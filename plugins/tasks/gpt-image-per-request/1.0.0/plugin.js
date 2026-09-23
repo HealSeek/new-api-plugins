@@ -160,7 +160,7 @@ export function buildSubmitRequest(ctx) {
     url: ctx.baseUrl + "/v1/images/generations",
     method: "POST",
     headers,
-    body: { model: req.model, prompt: req.prompt, size: req.size, n: req.n },
+    body: { model: req.model, prompt: req.prompt, size: req.size, quality: req.quality, n: req.n },
   };
 }
 
